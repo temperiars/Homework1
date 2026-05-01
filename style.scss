@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+body {
+    font-family: "Montserrat", "Arial";
+}
+
+.hero-page {
+  background-color: rgba(225, 255, 143, 1);
+  min-height: 100vh; 
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden
+}
+
+
+.hero-page__title {
+margin-top: 196px;
+color: rgba(32, 32, 39, 1);
+font-family: "Montserrat";
+font-style: Bold;
+font-size: 64px;
+font-weight: 700;
+line-height: 78px;
+letter-spacing: 0px;
+text-align: left;
+max-width: 769px;
+}
+
+.hero-page__subtitle {
+margin-top: 24px;
+color: rgba(32, 32, 39, 1);
+font-family: "Montserrat";
+font-size: 24px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: 0px;
+text-align: left;
+max-width: 720px;
+}
+
+
+header {
+    padding-left: 120px;
+    padding-right: 500px;
+}
+
+.star-big {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.star-1 {
+    position: absolute;
+    top: 69px;
+    left: 156px;
+}
+
+.star-2 {
+    position: absolute;
+    top: 96px;
+    left: 63px;
+}
+
+.star-3 {
+    position: absolute;
+    left: 948px;
+    bottom: 225px;
+}
+
+.star-4 {
+    position: absolute;
+    left: 1013px;
+    bottom: 149px;
+}
+
+.triangle {
+    position: absolute;
+    right: 117px;
+    bottom: 206px;
+}
+
+.vector1 {
+    position: absolute;
+    right: 269px;
+    top: 0;
+}
+
+.vector2 {
+    position: absolute;
+    right: 231px;
+    top: 254px;
+}
+
+.vector3 {
+    position: absolute;
+    top: 379px;
+    right: 0;
+}
+
+.vector4 {
+    position: absolute;
+    right: 61px;
+    bottom: 0;
+}
+
+
+.bold-text {
+  font-weight: 700;
+}
+
+
+.hero-page__btn {
+color: rgba(255, 255, 255, 1);
+font-family: "Montserrat";
+font-size: 24px;
+font-weight: 600;
+line-height: 141.69%;
+text-align: center;
+ box-sizing: border-box;
+border: 1px solid rgba(32, 32, 39, 1);
+border-radius: 60px;
+background: rgba(32, 32, 39, 1);
+width: 247px;
+height: 66px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+padding: 16px 28px 16px 28px;
+margin-top: 48px;
+}
+
+.hero-page__btn:hover {
+    color: black;
+    background: #FFFFFF;
+}
