@@ -14,7 +14,7 @@ body {
 
 .hero-page {
     background-color: rgba(225, 255, 143, 1);
-    min-height: 100vh; 
+    min-height: 800px;
     padding: 40px 20px;
     position: relative;
     overflow: hidden
@@ -77,13 +77,13 @@ header {
 
 .star-3 {
     position: absolute;
-    left: 948px;
+    right: 455px;
     bottom: 225px;
 }
 
 .star-4 {
     position: absolute;
-    left: 1013px;
+    right: 344px;
     bottom: 149px;
 }
 
@@ -302,3 +302,4 @@ text-transform: uppercase;
     text-align: left;
 }
 
+@import 'mobile';
