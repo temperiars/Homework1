@@ -1,0 +1,107 @@
+@media (max-width:767px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    .header {
+        padding-left: 17px;
+        padding-right: 17px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+ .star {
+    &-big {
+        max-width: 223.52px;
+        max-height: 238.57px;
+    }   
+
+    &-1 {
+        width: 21px;
+        height: 21px;
+        left: 91px;
+    }
+
+    &-2 {
+        width: 35px;
+        height: 35px;
+        left: 37px;
+    }
+
+    &-3 {
+        width: 18px;
+        height: 18px;
+        left: 272px;
+        bottom: 125px;
+    }
+
+    &-4 {
+        width: 39px;
+        height: 41px;
+        left: 303px;
+        bottom: 79px;
+    }
+ }
+    
+    .vector1 {
+      display: none;
+    }
+
+
+    .vector2 {
+        display: none;
+    }
+
+
+    .vector3 {
+        display: none;
+    }
+
+
+    .vector4 {
+        display: none;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+ .hero-page {
+    
+    &__title {
+        margin-top: 147px;
+        max-width: 262px;
+        max-height: 196px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+        
+    &__subtitle {
+        max-width: 296px;
+       font-size: 16px;
+       font-weight: 400;
+       line-height: 20px;
+       text-align: center;
+
+    }
+
+    &__btn {
+        margin-top: 36px;
+        width: 285px;
+        height: 55px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+    }
+ }
+ .about-games {
+    display: none;
+ }
+}
