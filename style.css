@@ -115,7 +115,7 @@ header {
   bottom: 0;
 }
 
-.hero-page__btn {
+.go-button {
   color: rgb(255, 255, 255);
   font-family: "Montserrat";
   font-size: 24px;
@@ -138,7 +138,7 @@ header {
   text-decoration: none;
 }
 
-.hero-page__btn:hover {
+.go-button:hover {
   color: black;
   background: #FFFFFF;
   transition: 0.5s;
@@ -349,8 +349,6 @@ header {
   }
   .hero-page__title {
     margin-top: 147px;
-    max-width: 262px;
-    max-height: 196px;
     font-size: 40px;
     font-weight: 700;
     line-height: 49px;
@@ -360,13 +358,12 @@ header {
     text-align: center;
   }
   .hero-page__subtitle {
-    max-width: 296px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     text-align: center;
   }
-  .hero-page__btn {
+  .go-button {
     margin-top: 36px;
     width: 285px;
     height: 55px;
