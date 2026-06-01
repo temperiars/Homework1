@@ -24,7 +24,6 @@ body {
   margin-top: 196px;
   color: rgb(32, 32, 39);
   font-family: "Montserrat";
-  font-style: Bold;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -50,7 +49,8 @@ body {
   color: black;
 }
 
-header {
+
+.header {
   padding-left: 120px;
   padding-right: 500px;
 }
@@ -167,11 +167,13 @@ header {
   text-align: left;
   text-transform: uppercase;
   font-family: "Montserrat";
-  font-style: Bold;
   font-size: 30px;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: 4%;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
   text-align: left;
   text-transform: uppercase;
 }
@@ -208,7 +210,6 @@ header {
   padding-top: 94px;
   color: rgb(255, 255, 255);
   font-family: "Montserrat";
-  font-style: Bold;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -293,7 +294,6 @@ header {
 .game-card__name {
   color: rgb(32, 32, 39);
   font-family: "Montserrat";
-  font-style: Bold;
   font-size: 32px;
   font-weight: 700;
   line-height: 39px;
