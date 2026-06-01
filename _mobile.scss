@@ -92,14 +92,19 @@
     
  }
 
- .go-button {
+.hero-page__btn {
+    display: flex;
+    justify-content: center;
+}
+
+.go-button {
         margin-top: 36px;
         width: 285px;
         height: 55px;
         font-size: 16px;
         font-weight: 600;
         line-height: 141.69%;
-    }
+}
 
  .about-games {
     display: none;

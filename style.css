@@ -15,7 +15,6 @@ body {
 .hero-page {
   background-color: rgb(225, 255, 143);
   min-height: 800px;
-  padding: 40px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -24,7 +23,6 @@ body {
   margin-top: 196px;
   color: rgb(32, 32, 39);
   font-family: "Montserrat";
-  font-style: Bold;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -48,11 +46,6 @@ body {
 .bold-text {
   font-weight: 700;
   color: black;
-}
-
-header {
-  padding-left: 120px;
-  padding-right: 500px;
 }
 
 .star-big {
@@ -161,11 +154,9 @@ header {
 .animated-strip__text {
   color: rgb(32, 32, 39);
   font-family: "Montserrat";
-  font-style: Bold;
   font-size: 30px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: 4%;
   text-align: left;
   text-transform: uppercase;
 }
@@ -174,6 +165,7 @@ header {
   background-color: rgb(32, 32, 39);
   position: relative;
   z-index: 1;
+  padding-bottom: 46px;
 }
 
 .about-games__stars-big {
@@ -201,7 +193,6 @@ header {
   padding-top: 94px;
   color: rgb(255, 255, 255);
   font-family: "Montserrat";
-  font-style: Bold;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -286,12 +277,137 @@ header {
 .game-card__name {
   color: rgb(32, 32, 39);
   font-family: "Montserrat";
-  font-style: Bold;
   font-size: 32px;
   font-weight: 700;
   line-height: 39px;
   letter-spacing: 0px;
   text-align: left;
+}
+
+.mini-games {
+  background-color: rgb(32, 32, 39);
+  position: relative;
+  z-index: 1;
+}
+.mini-games__star1 {
+  position: absolute;
+  right: 123px;
+  top: 93px;
+  z-index: -1;
+}
+.mini-games__star2 {
+  position: absolute;
+  right: 44px;
+  top: 126px;
+  z-index: -1;
+}
+.mini-games__star3 {
+  position: absolute;
+  right: 52px;
+  bottom: 65px;
+  z-index: -1;
+}
+.mini-games__star4 {
+  position: absolute;
+  right: 150px;
+  bottom: 45px;
+  z-index: -1;
+}
+.mini-games__title {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 72px;
+}
+.mini-games__card {
+  margin-top: 32px;
+  max-width: 1200px;
+  max-height: 500px;
+  border-radius: 30px;
+  box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.mini-games__card-right {
+  flex-direction: row;
+}
+.mini-games__name {
+  margin-top: 48px;
+  color: rgb(32, 32, 39);
+  font-family: "Montserrat";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.mini-games__text {
+  margin-top: 24px;
+  color: rgb(32, 32, 39);
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  max-width: 457px;
+}
+.mini-games__info {
+  margin-left: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-box {
+  padding-bottom: 144px;
+}
+
+.play-btn {
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  width: 247px;
+  height: 66px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  text-decoration: none;
+}
+
+.play-btn:hover {
+  color: black;
+  background: transparent;
+  transition: 0.5s;
+}
+
+.footer {
+  background-color: rgb(189, 237, 53);
+  height: 150px;
+}
+.footer__text {
+  padding-top: 61px;
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
@@ -362,6 +478,10 @@ header {
     font-weight: 400;
     line-height: 20px;
     text-align: center;
+  }
+  .hero-page__btn {
+    display: flex;
+    justify-content: center;
   }
   .go-button {
     margin-top: 36px;
