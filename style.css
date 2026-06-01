@@ -15,6 +15,7 @@ body {
 .hero-page {
   background-color: rgb(225, 255, 143);
   min-height: 800px;
+  padding: 40px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -23,6 +24,7 @@ body {
   margin-top: 196px;
   color: rgb(32, 32, 39);
   font-family: "Montserrat";
+  font-style: Bold;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -46,6 +48,11 @@ body {
 .bold-text {
   font-weight: 700;
   color: black;
+}
+
+header {
+  padding-left: 120px;
+  padding-right: 500px;
 }
 
 .star-big {
@@ -159,6 +166,14 @@ body {
   line-height: 110%;
   text-align: left;
   text-transform: uppercase;
+  font-family: "Montserrat";
+  font-style: Bold;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 4%;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .about-games {
@@ -193,6 +208,7 @@ body {
   padding-top: 94px;
   color: rgb(255, 255, 255);
   font-family: "Montserrat";
+  font-style: Bold;
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -277,6 +293,7 @@ body {
 .game-card__name {
   color: rgb(32, 32, 39);
   font-family: "Montserrat";
+  font-style: Bold;
   font-size: 32px;
   font-weight: 700;
   line-height: 39px;
