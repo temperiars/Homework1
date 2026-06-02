@@ -11,7 +11,7 @@
 </head>
 <body>
 
-   <section class="hero-page center">
+   <section class="hero-page">
      <div class="stars">
         <svg class="star-big" width="413" height="528" viewBox="0 0 413 528" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M533.96 48.4061C543.388 51.031 805.793 161.965 805.793 161.965L527.388 191.848L703.271 417.66L455.314 263.412L430.049 524.856L360.161 249.531L127.215 380.493L287.683 188.266L2.90706 175.289L270.58 95.0267L71.6813 -134.041L351.313 -2.49639L415.308 -256.31L444.045 -1.9517L698.758 -177.398L533.96 48.4061Z" fill="#BCEC30" stroke="#202027" stroke-miterlimit="10" stroke-linecap="round"/>
@@ -72,7 +72,6 @@
        <div class="hero-page__btn"> 
          <a href="#about-games" class="go-button">Поехали!</a>          
        </div>       
-       </div>
      </header>
    </section>     
     
@@ -95,7 +94,7 @@
       <p class="about-games__text">В моей коллекции представлено 6 игр на разные темы. Игры&nbsp;несложные — в них может поиграть каждый. Все&nbsp;игры&nbsp;доступны для пользования</p>
         <div class="game-box">
             <div class="game-card">
-              <a href="#">
+              <a href="#mini-games__card_divine">
               <div class="game-card__divine">
                  <img class="game-card__img" src="img/game_card_1.png" alt="">
                    <div class="game-card__info">
@@ -108,7 +107,7 @@
 
 
             <div class="game-card game-card-2">
-              <a href="#">
+              <a href="#mini-games__card_arithmetic">
                <div class="game-card__arithmetic">
                  <img class="game-card__img" src="img/game_card_2.png" alt="">
                   <div class="game-card__info">
@@ -121,7 +120,7 @@
               
              
             <div class="game-card">
-              <a href="#">
+              <a href="#mini-games__card_text">
                <div class="game-card__text">
                  <img class="game-card__img" src="img/game_card_3.png" alt="">
                   <div class="game-card__info">
@@ -133,7 +132,7 @@
             </div>
             
             <div class="game-card game-card-big">
-              <a href="#">
+              <a href="#mini-games__card_stone">
                <div class="game-card__stone">
                  <img class="game-card__img" src="img/game_card_4.png" alt="">
                  <div class="game-card__info">
@@ -145,7 +144,7 @@
             </div>
              
             <div class="game-card game-card-2">
-              <a href="#">
+              <a href="#mini-games__card_quiz">
               <div class="game-card__quiz">
                  <img class="game-card__img" src="img/game_card_5.png" alt="">
                  <div class="game-card__info">
@@ -157,7 +156,7 @@
             </div>
              
             <div class="game-card game-card-big">
-              <a href="#">
+              <a href="#mini-games__card_generator">
               <div class="game-card__generator">
                   <img class="game-card__img" src="img/game_card_6.png" alt="">
                   <div class="game-card__info">
@@ -191,18 +190,18 @@
     </div>
     <h1 class="mini-games__title">Мини-игры</h1>
   <div class="card-box">
-      <div class="mini-games__card">
+      <div id="mini-games__card_divine" class="mini-games__card">
       <img class="mini-games-img" src="img/mini-games-img1.jpg" alt="">          
       <div class="mini-games__info">
         <p class="mini-games__name">Угадай число</p>                     
-        <p class="mini-games__text">Попробуй угадать случайное число&nbsp;от 1 до 100.</p>  
+        <p class="mini-games__text">Попробуй угадать случайное число&nbsp;от&nbsp;1&nbsp;до&nbsp;100.</p>  
          <div class="mini-games__btn">
            <a class="play-btn" href="">Играть!</a>        
         </div>
       </div>
     </div>
 
-    <div class="mini-games__card mini-games__card-right">
+    <div id="mini-games__card_arithmetic" class="mini-games__card mini-games__card-right">
       <img class="mini-games-img" src="img/mini-games-img2.jpg" alt="">
       <div class="mini-games__info">
         <p class="mini-games__name">Простая арифметика</p>                     
@@ -213,21 +212,24 @@
       </div>   
     </div>
 
-    <div class="mini-games__card">
+    <div id="mini-games__card_text" class="mini-games__card">
       <img class="mini-games-img" src="img/mini-games-img3.jpg" alt="">
       <div class="mini-games__info">
         <p class="mini-games__name">Переверни текст</p>                     
-        <p class="mini-games__text">Попробуй ввести текст, который будет перевернут.</p>  
+        <p class="mini-games__text">Попробуй ввести текст, который будет&nbsp;перевернут.</p>  
         <div class="mini-games__btn">
            <a class="play-btn" href="">Играть!</a>        
         </div>
       </div>
     </div>
 
-    <div class="mini-games__card mini-games__card-right">
+    <div id="mini-games__card_stone" class="mini-games__card mini-games__card-right">
       <img class="mini-games-img" src="img/mini-games-img4.jpg" alt="">
       <div class="mini-games__info">
-        <p class="mini-games__name">Камень, ножницы, бумага</p>                     
+        <p class="mini-games__name">Камень,
+         <span>ножницы,</span>
+         <span>бумага</span>
+       </p>                  
         <p class="mini-games__text">Сыграй в популярную игру против&nbsp;компьютера.</p>  
         <div class="mini-games__btn">
          <a class="play-btn" href="">Играть!</a>        
@@ -235,10 +237,11 @@
       </div>
     </div>
 
-    <div class="mini-games__card">
+    <div id="mini-games__card_quiz" class="mini-games__card">
       <img class="mini-games-img" src="img/mini-games-img5.jpg" alt="">
       <div class="mini-games__info">
-        <p class="mini-games__name">Простая викторина</p>                     
+        <p class="mini-games__name">Простая 
+          <span>викторина</span></p>                     
         <p class="mini-games__text">Отвечай на вопросы викторины с&nbsp;вариантами ответов.</p>
         <div class="mini-games__btn">
          <a class="play-btn" href="">Играть!</a>        
@@ -247,11 +250,12 @@
      
     </div>
 
-    <div class="mini-games__card mini-games__card-right">
+    <div id="mini-games__card_generator" class="mini-games__card mini-games__card-right">
       <img class="mini-games-img" src="img/mini-games-img6.jpg" alt="">
       <div class="mini-games__info">
-        <p class="mini-games__name">Генератор случайных цветов</p>                     
-        <p class="mini-games__text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>  
+        <p class="mini-games__name">Генератор случайных 
+          <span>цветов</span></p>                     
+        <p class="mini-games__text">Игра, в которой при клике на кнопку фон&nbsp;страницы меняется на случайный.</p>  
         <div class="mini-games__btn">
          <a class="play-btn" href="">Играть!</a>        
         </div>        

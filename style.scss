@@ -15,10 +15,7 @@ body {
 .hero-page {
     background-color: rgba(225, 255, 143, 1);
     min-height: 800px;
-<<<<<<< HEAD
     padding: 40px 20px;
-=======
->>>>>>> 0ebc2614d52bb2ebdffe694cd3f2030f080987e9
     position: relative;
     overflow: hidden
 }
@@ -28,10 +25,6 @@ body {
     margin-top: 196px;
     color: rgba(32, 32, 39, 1);
     font-family: "Montserrat";
-<<<<<<< HEAD
-    font-style: Bold;
-=======
->>>>>>> 0ebc2614d52bb2ebdffe694cd3f2030f080987e9
     font-size: 64px;
     font-weight: 700;
     line-height: 78px;
@@ -58,14 +51,13 @@ body {
 }
 
 
-<<<<<<< HEAD
+
 header {
     padding-left: 120px;
     padding-right: 500px;
 }
 
-=======
->>>>>>> 0ebc2614d52bb2ebdffe694cd3f2030f080987e9
+
 .star-big {
     position: absolute;
     right: 0;
@@ -151,10 +143,6 @@ header {
 }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 0ebc2614d52bb2ebdffe694cd3f2030f080987e9
 .go-button:hover {
     color: black;
     background: #FFFFFF;
@@ -183,17 +171,12 @@ header {
  line-height: 110%;
  text-align: left;
  text-transform: uppercase;
-<<<<<<< HEAD
-font-family: "Montserrat";
-font-style: Bold;
 font-size: 30px;
 font-weight: 700;
 line-height: 110%;
 letter-spacing: 4%;
 text-align: left;
 text-transform: uppercase;
-=======
->>>>>>> 0ebc2614d52bb2ebdffe694cd3f2030f080987e9
 }
 
 .about-games {
@@ -228,10 +211,6 @@ text-transform: uppercase;
     padding-top: 94px;
     color: rgba(255, 255, 255, 1);
     font-family: "Montserrat";
-<<<<<<< HEAD
-    font-style: Bold;
-=======
->>>>>>> 0ebc2614d52bb2ebdffe694cd3f2030f080987e9
     font-size: 64px;
     font-weight: 700;
     line-height: 78px;
@@ -320,10 +299,6 @@ text-transform: uppercase;
 .game-card__name {
     color: rgba(32, 32, 39, 1);
     font-family: "Montserrat";
-<<<<<<< HEAD
-    font-style: Bold;
-=======
->>>>>>> 0ebc2614d52bb2ebdffe694cd3f2030f080987e9
     font-size: 32px;
     font-weight: 700;
     line-height: 39px;
@@ -331,10 +306,7 @@ text-transform: uppercase;
     text-align: left;
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 0ebc2614d52bb2ebdffe694cd3f2030f080987e9
 .mini-games {
  background-color: rgba(32, 32, 39, 1);
  position: relative;  
@@ -408,6 +380,11 @@ text-transform: uppercase;
      text-align: left;
     }
 
+    &__name span {
+     display: block;
+   }
+
+
     &__text {
      margin-top: 24px;
      color: rgba(32, 32, 39, 1);
@@ -417,7 +394,6 @@ text-transform: uppercase;
      line-height: 32px;
      letter-spacing: 0px;
      text-align: left;
-     max-width: 457px;
     }
 
     &__info {
