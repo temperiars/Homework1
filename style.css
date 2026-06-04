@@ -508,4 +508,62 @@ header {
   .about-games {
     display: none;
   }
+  .card-box {
+    padding-bottom: 9.88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mini-games {
+    padding-top: 48px;
+  }
+  .mini-games__card {
+    max-width: 343px;
+    max-height: 626.63px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .mini-games__info {
+    margin-left: 29px;
+  }
+  .mini-games__stars {
+    display: none;
+  }
+  .mini-games__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    margin-left: 16px;
+    margin-bottom: 48px;
+  }
+  .mini-games__name {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    margin-top: 29px;
+  }
+  .mini-games__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 16px;
+  }
+  .mini-games__btn {
+    margin-bottom: 32px;
+  }
+  .play-btn {
+    margin-top: 32px;
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
+  }
+  .footer {
+    height: 100px;
+  }
+  .footer__text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    padding-top: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
