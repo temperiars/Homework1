@@ -352,7 +352,6 @@ text-transform: uppercase;
 
 
     &__card {
-     margin-top: 32px;
      max-width: 1200px;
      max-height: 500px;
      border-radius: 30px;
@@ -405,6 +404,9 @@ text-transform: uppercase;
 
 .card-box {
     padding-bottom: 144px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 
