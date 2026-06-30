@@ -226,3 +226,85 @@ function reverseText() {
         });
     }
 });
+
+
+console.log('=== Задание 1 ===');
+const str = 'js';
+const upperStr = str.toUpperCase();
+console.log(upperStr);
+
+
+
+console.log('\n=== Задание 2 ===');
+function filterByStart(arr, startString) {
+    const lowerStart = startString.toLowerCase();
+    return arr.filter(item => item.toLowerCase().startsWith(lowerStart));
+}
+console.log(filterByStart(['JavaScript', 'Java', 'Python'], 'ja'));
+
+
+
+console.log('\n=== Задание 3 ===');
+const number = 32.58884;
+console.log('floor:', Math.floor(number));
+console.log('ceil:', Math.ceil(number));
+console.log('round:', Math.round(number));
+
+
+
+console.log('\n=== Задание 4 ===');
+const numbers = [52, 53, 49, 77, 21, 32];
+console.log('min:', Math.min(...numbers));
+console.log('max:', Math.max(...numbers));
+
+
+
+console.log('\n=== Задание 5 ===');
+function getRandomNumber() {
+    return Math.floor(Math.random() * 10) + 1;
+}
+console.log('Случайное число:', getRandomNumber());
+
+
+
+console.log('\n=== Задание 6 ===');
+function getRandomArray(n) {
+    const length = Math.floor(n / 2);
+    const result = [];
+    for (let i = 0; i < length; i++) {
+        result.push(Math.floor(Math.random() * (n + 1)));
+    }
+    return result;
+}
+console.log(getRandomArray(10));
+
+
+console.log('\n=== Задание 7 ===');
+function getRandomInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log('Случайное от 5 до 15:', getRandomInRange(5, 15));
+
+
+
+console.log('\n=== Задание 8 ===');
+console.log('Текущая дата:', new Date());
+
+
+
+console.log('\n=== Задание 9 ===');
+const currentDate73 = new Date();
+currentDate73.setDate(currentDate73.getDate() + 73);
+console.log('Через 73 дня:', currentDate73.toLocaleDateString('ru-RU'));
+
+
+
+console.log('\n=== Задание 10 ===');
+function formatDate(date) {
+    const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                   'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+    const daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда',
+                       'четверг', 'пятница', 'суббота'];
+    return `Дата: ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} — это ${daysOfWeek[date.getDay()]}\nВремя: ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}:${String(date.getSeconds()).padStart(2, '0')}`;
+}
+console.log(formatDate(new Date()));
