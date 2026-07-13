@@ -187,6 +187,74 @@ function reverseText() {
 }
 
 
+
+
+function playRockPaperScissors() {
+    const options = ['камень', 'ножницы', 'бумага'];
+
+    let userInput = prompt(
+        'Игра "Камень, ножницы, бумага"\n\n' +
+        'Введите свой выбор:\n' +
+        '1. камень\n' +
+        '2. ножницы\n' +
+        '3. бумага\n\n' +
+        'Или введите слово: камень, ножницы, бумага'
+    );
+
+    if (userInput === null) {
+        alert('Игра прервана!');
+        return;
+    }
+
+    let userChoice = userInput.trim().toLowerCase();
+
+    if (userChoice === '1') {
+        userChoice = 'камень';
+    } else if (userChoice === '2') {
+        userChoice = 'ножницы';
+    } else if (userChoice === '3') {
+        userChoice = 'бумага';
+    }
+
+    if (!options.includes(userChoice)) {
+        alert('Некорректный ввод!\n\nПожалуйста, введите: камень, ножницы или бумага');
+        return;
+    }
+
+    const computerIndex = Math.floor(Math.random() * options.length);
+    const computerChoice = options[computerIndex];
+
+    let resultMessage;
+
+    if (userChoice === computerChoice) {
+        resultMessage = 'Ничья!';
+    } else if (
+        (userChoice === 'камень' && computerChoice === 'ножницы') ||
+        (userChoice === 'ножницы' && computerChoice === 'бумага') ||
+        (userChoice === 'бумага' && computerChoice === 'камень')
+    ) {
+        resultMessage = 'Вы победили!';
+    } else {
+        resultMessage = 'Компьютер победил!';
+    }
+
+    alert(
+        'РЕЗУЛЬТАТ ИГРЫ\n\n' +
+        'Ваш выбор: ' + userChoice + '\n' +
+        'Выбор компьютера: ' + computerChoice + '\n\n' +
+        resultMessage
+    );
+
+    console.log('=== Игра "Камень, ножницы, бумага" ===');
+    console.log('Ваш выбор:', userChoice);
+    console.log('Выбор компьютера:', computerChoice);
+    console.log('Результат:', resultMessage);
+}
+
+
+
+
+
    document.addEventListener('DOMContentLoaded', function() {
    
     
@@ -225,86 +293,80 @@ function reverseText() {
             reverseText();
         });
     }
+
+
+    const stoneBtn = document.querySelector('#mini-games__card_stone .play-btn');
+    if (stoneBtn) {
+        stoneBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            playRockPaperScissors();
+        });
+    }
 });
 
 
+
 console.log('=== Задание 1 ===');
-const str = 'js';
-const upperStr = str.toUpperCase();
-console.log(upperStr);
-
-
+const people = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+];
+console.log(people.sort((a, b) => a.age - b.age));
 
 console.log('\n=== Задание 2 ===');
-function filterByStart(arr, startString) {
-    const lowerStart = startString.toLowerCase();
-    return arr.filter(item => item.toLowerCase().startsWith(lowerStart));
+function isPositive(num) {
+    return num > 0;
 }
-console.log(filterByStart(['JavaScript', 'Java', 'Python'], 'ja'));
-
-
-
-console.log('\n=== Задание 3 ===');
-const number = 32.58884;
-console.log('floor:', Math.floor(number));
-console.log('ceil:', Math.ceil(number));
-console.log('round:', Math.round(number));
-
-
-
-console.log('\n=== Задание 4 ===');
-const numbers = [52, 53, 49, 77, 21, 32];
-console.log('min:', Math.min(...numbers));
-console.log('max:', Math.max(...numbers));
-
-
-
-console.log('\n=== Задание 5 ===');
-function getRandomNumber() {
-    return Math.floor(Math.random() * 10) + 1;
+function isMale(person) {
+    return person.gender === 'male';
 }
-console.log('Случайное число:', getRandomNumber());
-
-
-
-console.log('\n=== Задание 6 ===');
-function getRandomArray(n) {
-    const length = Math.floor(n / 2);
+function filter(arr, ruleFunction) {
     const result = [];
-    for (let i = 0; i < length; i++) {
-        result.push(Math.floor(Math.random() * (n + 1)));
+    for (let i = 0; i < arr.length; i++) {
+        if (ruleFunction(arr[i])) {
+            result.push(arr[i]);
+        }
     }
     return result;
 }
-console.log(getRandomArray(10));
+console.log(filter([3, -4, 1, 9], isPositive));
+const people2 = [
+    {name: 'Глеб', gender: 'male'},
+    {name: 'Анна', gender: 'female'},
+    {name: 'Олег', gender: 'male'},
+    {name: 'Оксана', gender: 'female'}
+];
+console.log(filter(people2, isMale));
 
+console.log('\n=== Задание 3 ===');
+const intervalId = setInterval(() => {
+    console.log('Текущая дата:', new Date().toLocaleString());
+}, 3000);
+setTimeout(() => {
+    clearInterval(intervalId);
+    console.log('30 секунд прошло');
+}, 30000);
 
-console.log('\n=== Задание 7 ===');
-function getRandomInRange(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+console.log('\n=== Задание 4 ===');
+function delayForSecond(callback) {
+    setTimeout(callback, 1000);
 }
-console.log('Случайное от 5 до 15:', getRandomInRange(5, 15));
+delayForSecond(function () {
+    console.log('Привет, Глеб!');
+});
 
-
-
-console.log('\n=== Задание 8 ===');
-console.log('Текущая дата:', new Date());
-
-
-
-console.log('\n=== Задание 9 ===');
-const currentDate73 = new Date();
-currentDate73.setDate(currentDate73.getDate() + 73);
-console.log('Через 73 дня:', currentDate73.toLocaleDateString('ru-RU'));
-
-
-
-console.log('\n=== Задание 10 ===');
-function formatDate(date) {
-    const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
-                   'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-    const daysOfWeek = ['воскресенье', 'понедельник', 'вторник', 'среда',
-                       'четверг', 'пятница', 'суббота'];
-    return `Дата: ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} — это ${daysOfWeek[date.getDay()]}\nВремя: ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}:${String(date.getSeconds()).padStart(2, '0')}`;
+console.log('\n=== Задание 5 ===');
+function delayForSecond2(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if (cb) {
+            cb();
+        }
+    }, 1000);
 }
-console.log(formatDate(new Date()));
+function sayHi(name) {
+    console.log(`Привет, ${name}!`);
+}
+delayForSecond2(() => sayHi('Глеб'));
