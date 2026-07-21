@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
@@ -90,8 +94,8 @@ header {
 
 .triangle {
     position: absolute;
-    right: 117px;
-    bottom: 206px;
+    right: 113px;
+    top: 468px;
 }
 
 .vector1 {
@@ -150,34 +154,55 @@ header {
 }
 
 .animated-strip {
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(50px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
     background: rgba(188, 236, 48, 1);
-    max-width: 3220px;
-    max-height: 90px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 57px;
+    border-top: 2px solid rgba(32, 32, 39, 0.2);
+    border-bottom: 2px solid rgba(32, 32, 39, 0.2);
    padding: 27px 49px 27px 49px;
+
+    
+    &__track {
+        display: flex;
+        white-space: nowrap;
+        animation: scroll-left 25s linear infinite;
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 51px;
+        padding-right: 57px; 
+        span {
+            color: rgba(32, 32, 39, 1);
+            font-family: "Montserrat";
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 110%;
+            text-transform: uppercase;
+            letter-spacing: 4%;
+        }
+        
+        svg {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+        }
+    }
 }
 
-.animated-strip__text {
-    color: rgba(32, 32, 39, 1);
- font-family: "Montserrat";
- font-size: 30px;
- font-weight: 700;
- line-height: 110%;
- text-align: left;
- text-transform: uppercase;
-font-size: 30px;
-font-weight: 700;
-line-height: 110%;
-letter-spacing: 4%;
-text-align: left;
-text-transform: uppercase;
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
+
 
 .about-games {
     background-color: rgba(32, 32, 39, 1);
@@ -311,6 +336,7 @@ text-transform: uppercase;
  background-color: rgba(32, 32, 39, 1);
  position: relative;  
  z-index: 1;
+ transition: background-color 0.5s ease;
    
    &__star1 {
      position: absolute;

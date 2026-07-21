@@ -76,19 +76,6 @@ function startQuiz() {
 
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    const quizBtn = document.querySelector('#mini-games__card_quiz .play-btn');
-    if (quizBtn) {
-        quizBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            startQuiz();
-        });
-    }
-    
-});
-
-
 function guessTheNumber() {
     const secretNumber = Math.floor(Math.random() * 100) +1;
     let attempts = 0;
@@ -253,12 +240,22 @@ function playRockPaperScissors() {
 
 
 
-
-
-   document.addEventListener('DOMContentLoaded', function() {
-   
+function generateRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
     
+    for (let i = 0; i < 6; i++) {
+        const randomIndex = Math.floor(Math.random() * 16);
+        color += letters[randomIndex];
+    }
+    
+    return color;
+}
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  
     const quizBtn = document.querySelector('#mini-games__card_quiz .play-btn');
     if (quizBtn) {
         quizBtn.addEventListener('click', function(e) {
@@ -267,7 +264,7 @@ function playRockPaperScissors() {
         });
     }
 
-
+    
     const guessBtn = document.querySelector('#mini-games__card_divine .play-btn');
     if (guessBtn) {
         guessBtn.addEventListener('click', function(e) {
@@ -276,7 +273,7 @@ function playRockPaperScissors() {
         });
     }
 
-
+    
     const arithmeticBtn = document.querySelector('#mini-games__card_arithmetic .play-btn');
     if (arithmeticBtn) {
         arithmeticBtn.addEventListener('click', function(e) {
@@ -285,7 +282,7 @@ function playRockPaperScissors() {
         });
     }
 
-
+   
     const textBtn = document.querySelector('#mini-games__card_text .play-btn');
     if (textBtn) {
         textBtn.addEventListener('click', function(e) {
@@ -294,7 +291,7 @@ function playRockPaperScissors() {
         });
     }
 
-
+   
     const stoneBtn = document.querySelector('#mini-games__card_stone .play-btn');
     if (stoneBtn) {
         stoneBtn.addEventListener('click', function(e) {
@@ -302,71 +299,18 @@ function playRockPaperScissors() {
             playRockPaperScissors();
         });
     }
-});
 
-
-
-console.log('=== Задание 1 ===');
-const people = [
-    { name: 'Глеб', age: 29 },
-    { name: 'Анна', age: 17 },
-    { name: 'Олег', age: 7 },
-    { name: 'Оксана', age: 47 }
-];
-console.log(people.sort((a, b) => a.age - b.age));
-
-console.log('\n=== Задание 2 ===');
-function isPositive(num) {
-    return num > 0;
-}
-function isMale(person) {
-    return person.gender === 'male';
-}
-function filter(arr, ruleFunction) {
-    const result = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (ruleFunction(arr[i])) {
-            result.push(arr[i]);
-        }
+    const generatorBtn = document.querySelector('#mini-games__card_generator .play-btn');
+    if (generatorBtn) {
+        generatorBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const randomColor = generateRandomColor();
+           
+            const miniGamesSection = document.querySelector('.mini-games');
+            if (miniGamesSection) {
+                miniGamesSection.style.backgroundColor = randomColor;
+                console.log('Цвет секции мини-игр изменен на:', randomColor);
+            }
+        });
     }
-    return result;
-}
-console.log(filter([3, -4, 1, 9], isPositive));
-const people2 = [
-    {name: 'Глеб', gender: 'male'},
-    {name: 'Анна', gender: 'female'},
-    {name: 'Олег', gender: 'male'},
-    {name: 'Оксана', gender: 'female'}
-];
-console.log(filter(people2, isMale));
-
-console.log('\n=== Задание 3 ===');
-const intervalId = setInterval(() => {
-    console.log('Текущая дата:', new Date().toLocaleString());
-}, 3000);
-setTimeout(() => {
-    clearInterval(intervalId);
-    console.log('30 секунд прошло');
-}, 30000);
-
-console.log('\n=== Задание 4 ===');
-function delayForSecond(callback) {
-    setTimeout(callback, 1000);
-}
-delayForSecond(function () {
-    console.log('Привет, Глеб!');
 });
-
-console.log('\n=== Задание 5 ===');
-function delayForSecond2(cb) {
-    setTimeout(() => {
-        console.log('Прошла одна секунда');
-        if (cb) {
-            cb();
-        }
-    }, 1000);
-}
-function sayHi(name) {
-    console.log(`Привет, ${name}!`);
-}
-delayForSecond2(() => sayHi('Глеб'));
